@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Jugar con capas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://getbootstrap.com/examples/dashboard/dashboard.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="js/jugar_con_capas.js"></script>
+        <script src="../marcar_pestaña_activa/js/marcar_pestana_activa.js"></script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">Jugando con capas</a>
+              </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <ul class="nav nav-sidebar">
+                        <li><a href="#" data-funcion='cambiar'>Cambiar su contenido</a></li>
+                        <li><a href="#" data-funcion='añadir' data-style='azul'>Añadir estilo</a></li>
+                        <li><a href="#" data-funcion='quitar' data-style='azul'>Quitar Estilo</a></li>
+                        <li><a href="#" data-funcion='despues'>Colocar una capa despues</a></li>
+                        <li><a href="#" data-funcion='antes'>Colocar una capa antes</a></li>
+                        <li><a href="#" data-funcion='animate' data-animacion='{opacity: 0.5,left:"+=60"},3000'>Animar</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                    <h1>El contenedor de debajo variara en función de la opción seleccionada</h1>
+                    <div class="JScontent contentChanges"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
