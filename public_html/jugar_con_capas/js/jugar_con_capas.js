@@ -12,9 +12,8 @@ function cambiarContenido(capa, contenido){
     $(capa).html(contenido);
 }
 
-function animarCapa(capa, animacion){
-    console.log(animacion);
-    $(capa).animate(animacion);
+function animarCapa(capa){
+    $(capa).animate({width: "155px"},3000,function(){});
 }
 
 function anadirClase(capa, clase){
@@ -54,7 +53,7 @@ $(document).on('click', 'ul li a', function(){
             colocarCapaAntes(contenedor, nuevoContenido);
             break;
         case 'animate':
-            animarCapa(contenedor, $this.data('animacion'));
+            animarCapa(contenedor);
             break;
     }
 
