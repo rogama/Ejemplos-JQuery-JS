@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>marcar pestaña activa</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="js/marcar_pestana_activa.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar navbar-default">
+            <ul class="nav navbar-nav">
+                <li class="active"><a>1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+            </ul>
+            </div>
+            <div class="jumbotron">
+                <h1>Ejemplo de marcado activa una pesataña u otra</h1>
+                <p>En este ejemplo muestro como marcar una pestaña u otra<br />
+                    Para ello uso el siguiente código JQuery:<br /></p>
+<pre>$(document).on('click', 'ul li', function(){ 
+    var $this= $(this);
+
+    $('ul li').removeClass('active');
+    $this.addClass('active');
+});</pre>
+                <p>Mediante el evento on de JQuery le pido que ejecute este códogo al hacer click sobre uno de los &lt;li&gt;
+                en ese momento le pido que borre la clase 'active' de todos los &lt;li&gt; anteriores, y se la asigno al que lanza la petición,
+                es decir al que ha sido pulsado.</p>
+                <p>Para hacerlo mas atractivo me he servido de los css de bootstrap, pero la idea es usar nuestros propios CSS y JS</p>
+              </div>
+        </div>
+        
+    </body>
+</html>
